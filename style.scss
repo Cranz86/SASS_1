@@ -1,0 +1,24 @@
+$color: green;
+$font: 20px;
+
+@import 'reset';
+
+@mixin flex($ai, $jc) {
+	display: flex;
+	align-items: $ai;
+	justify-content: $jc;
+}
+
+body{
+	color: $color;
+	font-size: $font;
+}
+	h1 {
+		font-weight: 500;
+		&:hover {
+		background: #000;
+	}
+}
+.container {
+	@include flex(flex-start, space-between);
+}
